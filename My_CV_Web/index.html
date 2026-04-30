@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thomas Sameh | Software Engineering Student</title>
+  <meta name="description"
+    content="Portfolio of Thomas Sameh — Software Engineering student at Cairo University passionate about web development, C++, Java, and React." />
+  <!-- Favicon -->
+  <link rel="icon" href="ts_logo.png" type="image/png" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- ==================== LOADER ==================== -->
+  <div id="loader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- ==================== ANIMATED BACKGROUND ==================== -->
+  <div class="bg-particles">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+  </div>
+
+  <!-- Three.js Canvas -->
+  <div id="canvas-container"></div>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="nav-logo">TS.</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:0.75rem;">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== HOME ==================== -->
+  <section id="home">
+    <div class="hero-container">
+      <div class="hero-image-wrapper reveal">
+        <div class="hero-image-ring" id="heroImage">
+          <img src="profile.jpg" alt="Thomas Sameh" />
+        </div>
+        <div class="hero-glow"></div>
+      </div>
+      <div class="hero-text reveal">
+        <p class="greeting">Hello, I'm</p>
+        <h1>Thomas <span>Sameh</span></h1>
+        <p class="tagline">Software Engineering Student</p>
+        <p class="subtitle">Crafting elegant digital experiences — from concept to code. I transform ideas into
+          interactive, user-friendly products that make a difference.</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn-primary">View My Work</a>
+          <a href="#contact" class="btn-outline">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section id="about">
+    <div class="about-container">
+      <h2 class="section-title reveal">About <span>Me</span></h2>
+      <div class="about-content">
+        <div class="about-bio reveal">
+          <h3>Who I Am</h3>
+          <p>Software Engineering student passionate about building web applications and solving real-world problems.
+            Experienced in JavaScript, C++, and React. I enjoy turning ideas into interactive and user-friendly
+            products.</p>
+          <br />
+          <p>Currently studying at Cairo University, I'm always exploring new technologies and pushing the boundaries of
+            what's possible on the web.</p>
+        </div>
+        <div class="skills-grid reveal">
+          <div class="skill-category">
+            <h4>Languages</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Python</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h4>Frontend</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">React</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h4>Databases</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">SQL</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h4>Tools</h4>
+            <div class="skill-tags">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">VS Code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROJECTS ==================== -->
+  <section id="projects">
+    <div class="projects-container">
+      <h2 class="section-title reveal">My <span>Projects</span></h2>
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card reveal" data-project="movie">
+          <div class="project-icon">🎬</div>
+          <h3>Movie Web App</h3>
+          <p>A dynamic web application for browsing, searching, and discovering movies with a sleek interface.</p>
+          <button class="btn-details" onclick="openModal('movie')">View Details →</button>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal" data-project="gpa">
+          <div class="project-icon">🎓</div>
+          <h3>GPA Calculator</h3>
+          <p>An interactive GPA calculator with clean UI for students to track and manage their academic performance.
+          </p>
+          <button class="btn-details" onclick="openModal('gpa')">View Details →</button>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal" data-project="ecommerce">
+          <div class="project-icon">🛒</div>
+          <h3>E-Commerce System</h3>
+          <p>A complete e-commerce system built with C++ featuring product management, cart, and order processing.</p>
+          <button class="btn-details" onclick="openModal('ecommerce')">View Details →</button>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card reveal" data-project="music">
+          <div class="project-icon">🎵</div>
+          <h3>Music Management System</h3>
+          <p>A system for organizing and managing music collections with playlist creation and search functionality.</p>
+          <button class="btn-details" onclick="openModal('music')">View Details →</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CERTIFICATES ==================== -->
+  <section id="certificates">
+    <div class="certs-container">
+      <h2 class="section-title reveal">Certificates &amp; <span>Courses</span></h2>
+      <div class="certs-grid">
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="cert-info">
+            <h3>CS50</h3>
+            <p>Harvard University</p>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fas fa-code"></i></div>
+          <div class="cert-info">
+            <h3>Algorithms Level 2/3</h3>
+            <p>Advanced Problem Solving</p>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fas fa-laptop-code"></i></div>
+          <div class="cert-info">
+            <h3>Web Development</h3>
+            <p>Black Horse</p>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fab fa-js-square"></i></div>
+          <div class="cert-info">
+            <h3>JavaScript Fundamentals &amp; Advanced</h3>
+            <p>Complete JavaScript Mastery</p>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-icon"><i class="fab fa-java"></i></div>
+          <div class="cert-info">
+            <h3>Java Fundamentals + OOP</h3>
+            <p>Object-Oriented Programming</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section id="contact">
+    <div class="contact-container">
+      <h2 class="section-title reveal">Get In <span>Touch</span></h2>
+      <div class="contact-content">
+        <div class="contact-info reveal">
+          <div class="contact-item">
+            <div class="icon"><i class="fas fa-envelope"></i></div>
+            <div class="info">
+              <h4>Email</h4>
+              <a href="mailto:thomas.sameh@email.com">thomas.sameh@email.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon"><i class="fas fa-phone"></i></div>
+            <div class="info">
+              <h4>Phone</h4>
+              <p>+20 155 100 1938</p>
+            </div>
+          </div>
+          <div class="contact-item" onclick="window.open('https://github.com/thomas-774', '_blank')"
+            style="cursor: pointer;">
+            <div class="icon"><i class="fab fa-github"></i></div>
+            <div class="info">
+              <h4>GitHub</h4>
+              <a href="https://github.com/thomas-774" target="_blank"
+                onclick="event.stopPropagation()">github.com/thomas-774</a>
+            </div>
+          </div>
+          <div class="contact-item"
+            onclick="window.open('https://www.linkedin.com/in/tomas-sameh-b13919248/', '_blank')"
+            style="cursor: pointer;">
+            <div class="icon"><i class="fab fa-linkedin"></i></div>
+            <div class="info">
+              <h4>LinkedIn</h4>
+              <a href="https://www.linkedin.com/in/tomas-sameh-b13919248/" target="_blank"
+                onclick="event.stopPropagation()">Thomas Sameh</a>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/xjgjljkk" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required id="contactName" />
+          <input type="email" name="email" placeholder="Your Email" required id="contactEmail" />
+          <textarea name="message" placeholder="Your Message" required id="contactMessage"></textarea>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MODAL ==================== -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc"></p>
+      <h4 style="margin-bottom:0.5rem;font-size:0.9rem;color:var(--text-muted);">Technologies Used</h4>
+      <div class="tech-stack" id="modalTech"></div>
+      <h4 style="margin-bottom:0.5rem;font-size:0.9rem;color:var(--text-muted);">Challenges</h4>
+      <p id="modalChallenges"></p>
+      <div class="modal-links" id="modalLinks"></div>
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <p>© 2026 Thomas Sameh. Built with ❤️ and vanilla code.</p>
+  </footer>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <!-- Three.js CDN (must load before threejs-bg.js) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+  <!-- Modular JS files — order matters -->
+  <script src="js/loader.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/scroll-reveal.js"></script>
+  <script src="js/tilt.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/threejs-bg.js"></script>
+
+</body>
+
+</html>
